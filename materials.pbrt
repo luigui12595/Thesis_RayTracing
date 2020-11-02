@@ -1,0 +1,27 @@
+#Materials File
+
+# Stellarator metal material
+MakeNamedMaterial "metal"
+        "float roughness" .001
+        "string type" [ "metal" ] 
+        "spectrum k" "spds/Al.k.spd"
+        "spectrum eta" "spds/Al.eta.spd"
+				
+# Plasma transluscent glass appearance
+MakeNamedMaterial "glassap"
+		"string type" [ "glass" ]
+		"float eta" [ 1 ]
+		
+# Plasma chemeoluminiscense	appearance	
+MakeNamedMaterial "kd"
+	   "string type" ["kdsubsurface"]
+	   "spectrum Kd" "spds/luminol1.spd"
+	   "spectrum Kr" "spds/luminol1.spd"
+	   "spectrum Kt" "spds/luminol0.1.spd"
+
+# Plasma mixed material		
+MakeNamedMaterial "mix"
+		"string type" ["mix"]
+		"string namedmaterial1" [ "glassap" ]
+		"string namedmaterial2" [ "kd" ]
+		
