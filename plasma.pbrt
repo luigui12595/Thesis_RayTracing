@@ -1,0 +1,38 @@
+
+Film "image" 
+        "integer xresolution" [ 800 ] 
+        "integer yresolution" [ 800 ] 
+        "string filename" [ "NewApproach/final-scene-take-12.png" ] 
+Integrator "path" "integer maxdepth" [4] 
+
+Sampler "02sequence" "integer pixelsamples" [8]
+
+
+
+LookAt -0.75 1.80 -1.25 # Eye
+        -1 0.800000012 0	   # LookAt
+        0 1 0				   # UpVector
+Camera "perspective" 
+        "float fov" [ 95 ] 
+
+#############################################
+WorldBegin
+
+AttributeBegin
+	Rotate -60 0 0 1
+    LightSource "infinite" 
+            "string mapname" [ "textures/skylight-day.exr" ] 
+            "rgb scale" [ 1.5000000000 1.5000000000 1.3999999762 ] 
+AttributeEnd
+
+#LightSource "spot" 
+#        "float coneangle" [ 6.3499999046 ] 
+ #       "point from" [ -5 8 -4 ] 
+  #      "point to" [ -1 1 0 ] 
+   #     "rgb I" [ 2500 2500 2500 ]
+
+Include "materials.pbrt"
+
+Include "geometry.pbrt"
+
+WorldEnd
