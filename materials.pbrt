@@ -39,4 +39,6 @@ MakeNamedMaterial "mix"
 		"string namedmaterial2" [ "gla" ]
 		"spectrum amount" [0.9]
 
-		
+MakeNamedMaterial "OuterMat" 
+         "string type" "fourier"
+         "string bsdffile" "bsdfs/roughglass_alpha_0.2.bsdf"
