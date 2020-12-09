@@ -1,0 +1,45 @@
+
+Film "image" 
+        "integer xresolution" [ 1000 ] 
+        "integer yresolution" [ 1000 ] 
+        "string filename" [ "../Thesis_RayTracing/tests/trans/trans-test-3.png" ] 
+Integrator "path" "integer maxdepth" [8] 
+
+Sampler "02sequence" "integer pixelsamples" [64]
+
+
+
+LookAt -0.75 1.80 -1.15 		# Eye
+        -1 0.800000012 0	   # LookAt
+        0 1 0				   # UpVector
+Camera "perspective" 
+        "float fov" [ 95 ] 
+
+#############################################
+WorldBegin
+
+AttributeBegin
+	Rotate -60 0 0 1
+    LightSource "infinite" 
+            "string mapname" [ "textures/skylight-day.exr" ] 
+            "rgb scale" [ 1.5000000000 1.5000000000 1.3999999762 ] 
+AttributeEnd
+
+AttributeBegin
+	LightSource "point"
+		"rgb I" [ .8 .8 .8 ]
+		"point from" [-0.5 1 -0.15]
+AttributeEnd
+
+#LightSource "spot" 
+#        "float coneangle" [ 6.3499999046 ] 
+ #       "point from" [ -5 8 -4 ] 
+  #      "point to" [ -1 1 0 ] 
+   #     "rgb I" [ 2500 2500 2500 ]
+
+Include "materials3.pbrt"
+
+Include "geometry.pbrt"
+
+
+WorldEnd

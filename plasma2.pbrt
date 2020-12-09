@@ -2,8 +2,8 @@
 Film "image" 
         "integer xresolution" [ 1000 ] 
         "integer yresolution" [ 1000 ] 
-        "string filename" [ "../Thesis_RayTracing/tests/trans/trans-test-6.png" ] 
-Integrator "path" "integer maxdepth" [5] 
+        "string filename" [ "../Thesis_RayTracing/tests/trans/trans-test-7.png" ] 
+Integrator "path" "integer maxdepth" [8] 
 
 Sampler "02sequence" "integer pixelsamples" [64]
 
@@ -37,7 +37,7 @@ AttributeEnd
   #      "point to" [ -1 1 0 ] 
    #     "rgb I" [ 2500 2500 2500 ]
 
-Include "materials.pbrt"
+Include "materials2.pbrt"
 
 Include "geometry.pbrt"
 
